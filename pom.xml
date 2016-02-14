@@ -18,7 +18,12 @@
 			<artifactId>jersey-container-servlet</artifactId>
 			<version>2.5.1</version>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>2.13.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -42,7 +47,10 @@
 					<server>tomcat-tktk</server>
 					<port>8080</port>
 					<path>/IRKitService</path>
+					<update>true</update>
 					<url>http://192.168.2.201:8080/manager/text</url>
+					<username>tktk</username>
+					<password>tktk++</password>
 				</configuration>
 			</plugin>
 		</plugins>

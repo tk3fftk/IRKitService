@@ -5,20 +5,20 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
 
-	<display-name>HelloRESTMaven</display-name>
+	<display-name>IRKitService</display-name>
 
 	<servlet>
-		<servlet-name>HelloRESTMaven</servlet-name>
+		<servlet-name>IRKitService</servlet-name>
 		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
 
 		<init-param>
 			<param-name>jersey.config.server.provider.packages</param-name>
-			<param-value>com.example</param-value>
+			<param-value>jp.kobe_u.cs27</param-value>
 		</init-param>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>HelloRESTMaven</servlet-name>
+		<servlet-name>IRKitService</servlet-name>
 		<url-pattern>/api/*</url-pattern>
 	</servlet-mapping>
 
