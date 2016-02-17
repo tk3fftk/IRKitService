@@ -17,6 +17,7 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClients;
 import org.bson.Document;
 
+import com.mongodb.client.FindIterable;
 import com.mongodb.util.JSON;
 
 /**
@@ -91,6 +92,20 @@ public class IRKitController {
 		catch (NullPointerException e) {
 			return false;
 		}
+	}
+	
+	/**
+	 * 登録されているIR信号のリストを取得する
+	 * @return
+	 */
+	public String list(){
+		String json = "{\"ir_list\":[";
+		FindIterable<Document> irList = MongoDBUtil.getInstance().find(collectionName);
+		for(Document doc : irList){
+			json = json.concat(doc.toJson()).concat(",");
+		}
+		json = json.substring(0, json.length()-1);
+		return json + "]}";
 	}
 
 	/**
@@ -185,19 +200,6 @@ public class IRKitController {
 			e.printStackTrace();
 		}
 		return "";
-	}
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// MongoDBUtil.getInstance().insertOne("test", new Document("test",
-		// "test"));
-
-		IRKitController c = new IRKitController();
-		// System.out.println(c.learn("aa"));
-		c.send("tv_on");
-
 	}
 
 }

@@ -31,5 +31,9 @@ public class IRKitControllerTest {
 		assertFalse(c.send("hoge"));
 	}
 	
+	@Test
+	public void listTest(){
+		System.out.println(c.list());
+	}
 
 }
