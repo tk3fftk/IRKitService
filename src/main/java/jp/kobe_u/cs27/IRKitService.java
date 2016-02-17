@@ -32,7 +32,9 @@ public class IRKitService {
 	@Produces({ MediaType.APPLICATION_JSON})
 	@Path("/send/{id}")
 	public Response send(@PathParam("id") String id) {
-		return Response.ok().entity("aa").build();
+		boolean result = controller.send(id);
+		String json = "{\"result\":" + result + "}";
+		return Response.ok().entity(json).build();
 	}
 
 	@GET
