@@ -1,5 +1,5 @@
 # IRKitService
-IRKit(http://getirkit.com/)をWebサービスでラップし，Web-APIを持たせる
+IRKit ( http://getirkit.com/ ) をWebサービスでラップし，Web-APIを持たせる
 
 ## 動作環境
 - Java8
