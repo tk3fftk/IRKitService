@@ -54,7 +54,7 @@
 					<port>8080</port>
 					<path>/IRKitService</path>
 					<update>true</update>
-					<url>http://192.168.2.201:8080/manager/text</url>
+					<url>http://192.168.3.102:8080/manager/text</url>
 					<username>tktk</username>
 					<password>tktk++</password>
 				</configuration>

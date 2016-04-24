@@ -29,7 +29,7 @@ import com.mongodb.util.JSON;
 public class IRKitController {
 
 	// IRKitのIP 外部ファイル化したい
-	private final String IRKitIP = "192.168.2.107";
+	private final String IRKitIP = "192.168.3.103";
 	private final String collectionName = "ir_signals";
 
 	public String learn(String id) {

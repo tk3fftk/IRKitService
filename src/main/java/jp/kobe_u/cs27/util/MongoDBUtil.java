@@ -28,7 +28,7 @@ public class MongoDBUtil {
 	private static MongoDatabase db;
 
 	// mongoserv
-	private static final String dbAddr = "192.168.2.201";
+	private static final String dbAddr = "192.168.3.102";
 	private static final int dbPort = 27017;
 	private static final String dbName = "irkit";
 
